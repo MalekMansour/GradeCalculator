@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grade Average Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+  <div id="gradeCalculator">
+    <form>
+      <h1>Grade Average Calculator</h1> 
+      <label for="currentGrade">Current Grade:</label>
+      <input type="number" id="currentGrade" min="0" max="100" required><br>
+
+      <label for="desiredGrade">Desired Grade:</label>
+      <input type="number" id="desiredGrade" min="0" max="100" required>
+      <button type="button" onclick="setPassingGrade()">I just want to pass</button><br>
+
+      <label for="finalWeight">Final Exam Weight (%):</label>
+      <input type="number" id="finalWeight" min="0" max="100" required><br>
+
+      <button type="button" onclick="calculateGrade()">Calculate</button>
+    </form>
+
+    <div id="result" style="display: none; margin-top: 20px;">
+      <h2>Your Needed Final Exam Grade:</h2>
+      <p id="finalExamGrade"></p>
+    </div>
+
+    <div id="gifDisplay" style="display: none; margin-top: 20px;">
+      <img id="passingGif" src="" alt="Passing GIF" style="width: 250px; height: 250px;">
+      <button id="copyGradeButton" onclick="copyGradeLink()">Copy Grade Needed</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
